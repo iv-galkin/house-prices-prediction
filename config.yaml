@@ -1,0 +1,31 @@
+data:
+  train_path: input_files/train.csv
+  test_path: input_files/test.csv
+  submission_path: output/submission.csv
+
+target: SalePrice
+id_column: Id
+
+features:
+  # всё остальное разбивается на числовые/категориальные автоматически по типу
+  drop:
+    - Id
+    - GarageYrBlt     # почти дублирует YearBuilt, пустой у домов без гаража
+    - GarageArea      # дублирует GarageCars 
+    - TotRmsAbvGrd    # дублирует GrLivArea
+    - 1stFlrSF        # дублирует TotalBsmtSF, есть в TotalSF
+    - Utilities       # почти константа
+    - Street          # почти константа
+    - Condition2      # почти константа
+
+model:
+  ridge:
+    alpha: 17.78279410038923
+  xgboost:
+    n_estimators: 460
+    max_depth: 2
+    min_child_weight: 1.1956919686025032
+    learning_rate: 0.03520628940669924
+    subsample: 0.6118976830930017
+    random_state: 42
+    enable_categorical: true

@@ -1,0 +1,47 @@
+{
+  "rf": {
+    "n_estimators": 152,
+    "max_depth": 15,
+    "min_samples_split": 4,
+    "min_samples_leaf": 1,
+    "max_features": 0.34572884381044644
+  },
+  "lgbm": {
+    "n_estimators": 672,
+    "max_depth": 3,
+    "num_leaves": 3,
+    "learning_rate": 0.07023069831858063,
+    "min_child_samples": 9
+  },
+  "xgb": {
+    "n_estimators": 460,
+    "max_depth": 2,
+    "min_child_weight": 1.1956919686025032,
+    "learning_rate": 0.03520628940669924,
+    "subsample": 0.6118976830930017
+  },
+  "mlp": {
+    "hidden_dims": "256_128",
+    "activation": "gelu",
+    "optimizer_cls": "adam",
+    "lr": 0.00011832481805701787,
+    "dropout": 0.4994535861772102,
+    "batchnorm": false,
+    "cosine": true,
+    "batch_size": 16
+  },
+  "rf_onehot": {
+    "n_estimators": 488,
+    "max_depth": 16,
+    "min_samples_split": 4,
+    "min_samples_leaf": 1,
+    "max_features": 0.35239604381809403
+  },
+  "rf_ordinal": {
+    "n_estimators": 717,
+    "max_depth": 14,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "max_features": 0.31896183712661
+  }
+}
