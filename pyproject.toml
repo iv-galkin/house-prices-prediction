@@ -3,7 +3,6 @@ name = "house-prices-prediction"
 version = "0.1.0"
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    "catboost>=1.2.10",
     "lightgbm>=4.7.0",
     "loguru>=0.7",
     "matplotlib>=3.11.2",
